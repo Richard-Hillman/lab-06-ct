@@ -1,14 +1,14 @@
-const app = require('./lib/app');
-const pool = require('./lib/utils/pool');
+const express = require('express');
+const app = express();
 
-const PORT = process.env.PORT || 7890;
-
-app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`Started on ${PORT}`);
+app.get('/', (req, res) => {
+  res.send('hello');
 });
 
-process.on('exit', () => {
-  console.log('Goodbye!');
-  pool.end();
+
+app.listen(7890, () => {
+  console.log ('listening on 7890');
 });
+
+
+module.exports = app;

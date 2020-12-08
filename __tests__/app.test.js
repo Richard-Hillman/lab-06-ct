@@ -1,10 +1,12 @@
-const fs = require('fs');
-const pool = require('../lib/utils/pool');
 const request = require('supertest');
-const app = require('../lib/app');
+const app = require('../server');
 
-describe('lab-six-ct routes', () => {
-  beforeEach(() => {
-    return pool.query(fs.readFileSync('./sql/setup.sql', 'utf-8'))
+describe('app test', () => {
+  it('responds with hello world', () => {
+    return request(app)
+      .get('/')
+      .then(res => {
+        expect(res.text).toEqual('hello');
+      });
   });
 });
