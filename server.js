@@ -1,14 +1,5 @@
-const express = require('express');
-const app = express();
-
-app.get('/', (req, res) => {
-  res.send('hello');
-});
-
+const app = require('./lib/app');
 
 app.listen(7890, () => {
   console.log ('listening on 7890');
 });
-
-
-module.exports = app;

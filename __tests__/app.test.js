@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../server');
+const app = require('../lib/app');
 
 describe('app test', () => {
   it('responds with hello world', () => {
