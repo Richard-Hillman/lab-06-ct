@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS cybertrucks;
+DROP TABLE IF EXISTS cyber_trucks;
 
-CREATE TABLE cybertrucks (
+CREATE TABLE cyber_trucks (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     title TEXT NOT NULL,
     descript TEXT NOT NULL,
