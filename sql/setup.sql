@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS cyber_trucks;
+
+CREATE TABLE cyber_trucks (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    title TEXT NOT NULL,
+    descript TEXT NOT NULL,
+    color TEXT NOT NULL
+); 
